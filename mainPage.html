@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- ?Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- ?Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- ?Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--? Custom CSS -->
+    <link rel="stylesheet" href="mainPage.css">
+
+    <title> Results Page | Student Information Tracker </title>
+</head>
+
+<body>
+
+    <!-- ?Modal1 ----------------------------------->
+    <div class="modal fade" id="AboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title" id="exampleModalCenterTitle">About the Student Information Tracker... &nbsp
+                        &nbsp &nbsp </h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        &nbsp &nbsp &nbsp &nbsp Student Information Tracking System is a Web application where User can
+                        <strong>search</strong> for a
+                        particular
+                        Student of the Institute and get the information along with his/her <em> performance </em>in
+                        exams for each
+                        semester.
+                        All the
+                        information is shown in a <strong>visually appealing way</strong> such as graphs, pie-charts,
+                        etc.
+                        <br> &nbsp &nbsp &nbsp &nbsp The
+                        application
+                        also
+                        <strong> suggests </strong>a particular stream / domain in which the student might be interested
+                        in based on
+                        his/her
+                        past performance.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--? Modal2 -------------------------------------->
+    <div class="modal fade" id="ContactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title" id="exampleModalCenterTitle">This Web App is created by Group No. 16 &nbsp
+                        &nbsp &nbsp</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <ul>
+                            <li>
+                                Omkar Dabir (Roll No.- 23116)
+                            </li>
+                            <li>
+                                Prince Bhagat (Roll No.- 23110)
+                            </li>
+                            <li>
+                                Ojas Telwane (Roll No.- 23140)
+                            </li>
+                            <li>
+                                Priyadarshan Todmal (Roll No.- 23161)
+                            </li>
+                            <li>
+                                Chirag Vohra (Roll No.- 23115)
+                            </li>
+                            <li>
+                                Akash Salave (Roll No.- 23151)
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--? div for navbar -->
+    <div>
+        <nav id="mainNavbar" class="navbar navbar-dark bg-dare navbar-expand-md py-2 fixed-top">
+            <!--? so that navbar is not fullscreen wide -->
+            <div class="container">
+
+                <!--? brand logo and name -->
+                <a href="loginpage.html" class="navbar-brand active px-2 mx-4 mx-md-0 " title="Home">
+                    <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Pict_logo.png"
+                        alt="HOME">
+                    STUDENT INFORMATION TRACKER
+                </a>
+
+                <!--? ham-burger button -->
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--? two links on left -->
+                <div class="collapse navbar-collapse " id="navLinks">
+                    <ul class="navbar-nav ml-auto nav nav-pills my-1">
+                        <li class="nav-item ">
+                            <a href="" class="nav-link mt-4 mt-md-0" data-toggle="modal" data-target="#AboutModal"
+                                title="About Website">
+                                <i class="fa fa-info-circle mr-3 mr-md-2 " aria-hidden="true"></i>
+                                HELP
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link" data-toggle="modal" data-target="#ContactModal"
+                                title="About Developers">
+                                <i class="fa fa-phone-square  mr-3 mr-md-2" aria-hidden="true"></i>
+                                ABOUT US</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+    </div>
+
+
+
+    <!--? mid-screen -->
+    <main>
+        <div class="container myContainer">
+
+
+            <!-- section1 start -->
+
+            <div class="section xyz row content d-flex justify-content-center align-items-center ">
+
+
+                <!-- Card1 -->
+                <div class="card col-10 col-sm-11 col-md-11 col-lg-8 " style="height: 450px;" id="card1">
+
+                    <!-- Upper -->
+                    <div class="row" style="height: 250px;">
+                        <!-- Upper-A -->
+                        <div class="card-title col-md-5  d-none d-md-block " style="height: 250px;"
+                            id="profile-picture">
+                            <i class="fa fa-user-circle "></i>
+                        </div>
+                        <!-- Upper-B -->
+                        <div class="col-md-7 " style="height: 250px; " id="card1-a">
+                            <div class="row " id="general-info-title">
+                                <div class="col-12 card-title">
+                                    GENERAL INFORMATION
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class=" col-12 " id="general-info-body">
+
+                                    <div class="row infos">
+                                        <div class="col-4 infos4">
+                                            <h6>NAME </h6>
+                                        </div>
+                                        <div class="col-8 field">
+                                            Omkar Sandeep Dabir
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row infos">
+                                        <div class="col-4 infos4">
+                                            <h6>REG. ID </h6>
+                                        </div>
+                                        <div class="col-8 field">
+                                            I2K18102515
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row infos">
+                                        <div class="col-4 infos4">
+                                            <h6>P.R.N. </h6>
+                                        </div>
+                                        <div class="col-8 field">
+                                            17900166J
+                                        </div>
+                                    </div>
+
+                                    <div class="row infos">
+                                        <div class="col-4 infos4">
+                                            <h6>CLASS </h6>
+                                        </div>
+                                        <div class="col-8 field">
+                                            SE-IX
+                                        </div>
+                                    </div>
+
+                                    <div class="row infos">
+                                        <div class="col-4 infos4">
+                                            <h6>ROLL NO. </h6>
+                                        </div>
+                                        <div class="col-8 field">
+                                            23116
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- lower -->
+                    <div class="row" style="height: 200px;">
+                        <div class="col-md-12 " id="card1-b">
+
+
+                            <div class="row ">
+                                <div class="col-12" id="contact-info-body">
+
+                                    <div class="row infos2">
+                                        <div class="col-5 col-md-4 infos3">
+                                            <h6>
+                                                <i class=" fa fa-phone d-none d-md-inline-block" aria-hidden="true"></i>
+                                                &nbsp MOBILE NO.
+                                            </h6>
+                                        </div>
+                                        <div class="col-7 col-md-8 field">
+                                            +91 750 760 1084
+                                        </div>
+                                    </div>
+
+                                    <div class="row infos2">
+                                        <div class="col-5 col-md-4 infos3">
+                                            <h6>
+                                                <i class="fa fa-envelope d-none d-md-inline-block"
+                                                    aria-hidden="true"></i>
+                                                &nbsp EMAIL
+                                            </h6>
+                                        </div>
+                                        <div class="col-7 col-md-8 field">
+                                            omkardabir2013@gmail.com
+                                        </div>
+                                    </div>
+
+                                    <div class=" row infos2">
+                                        <div class="col-5 col-md-4 infos3">
+                                            <h6>
+                                                <i class="fa fa-home d-none d-md-inline-block" aria-hidden="true"></i>
+                                                &nbsp ADDRESS
+                                            </h6>
+                                        </div>
+                                        <div class="col-7 col-md-8 field ">
+                                            B-4, VishnuPuram Society, Wadgaon Bk., Sinhagad Road, Pune - 411041.
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card1 ends -->
+
+
+            </div>
+
+            <!-- section1 end -->
+
+
+            <!-- section2 start -->
+
+            <div class="section row xyz d-flex justify-content-center align-items-center ">
+
+
+                <!-- Card2 -->
+                <div class="card col-10  col-md-9 col-lg-9 " id="card2">
+
+                    <!-- Upper -->
+                    <div class="card-title row" style="height: 50px;">
+                        SEMESTER-WISE STATISTICS
+                    </div>
+
+                    <!-- middle -->
+                    <div class="row" style="height: 50px;">
+
+                        <button autofocus type="button" class="col-3 semButtons" id="sem3a-button">
+                            <span>SEM - 3</span>
+                        </button>
+
+                        <button type="button" class="col-3 semButtons" id="sem4a-button">
+                            <span>SEM - 4</span>
+                        </button>
+
+                        <button type="button" autofocus class="col-3  semButtons" id="sem5a-button">
+                            <span>SEM - 5</span>
+                        </button>
+
+                        <button type="button" class="col-3 semButtons " id="sem6a-button">
+                            <span>SEM - 6</span>
+                        </button>
+
+
+                    </div>
+
+                    <!-- lower -->
+                    <div class="row ">
+
+                        <div class="card col-12">
+
+
+                            <div class="row ">
+                                <div class="card-title card2-titles col-lg-6 order-1  order-lg-1" style="height: 50px;">
+                                    SUBJECT WISE SCORE
+                                </div>
+                                <div class="card-title card2-titles col-lg-6 order-3  order-lg-2" style="height: 50px;">
+                                    MONTH-WISE ATTENDANCE
+                                </div>
+
+
+                                <div class=" card-body col-lg-6 order-2  order-lg-3 d-flex align-items-center justify-content-center"
+                                    style="height: 350px;">
+                                    <canvas id="subject-wise" width="100" height="70"></canvas>
+                                </div>
+                                <div class=" card-body col-lg-6 order-4  order-lg-4 d-flex align-items-center justify-content-center"
+                                    style="height: 350px;">
+                                    <canvas id="month-wise" width="100" height="70"></canvas>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <!-- Card3 ends -->
+                    </div>
+
+
+                </div>
+                <!-- Card2 ends -->
+
+
+            </div>
+
+            <!-- section2 end -->
+
+            <!-- section3 start -->
+
+            <div class="section row xyz d-flex justify-content-center align-items-center ">
+
+
+                <!-- Card3 -->
+                <div class="card col-10  col-md-9 col-lg-9 " id="card3">
+
+
+                    <div class="row ">
+                        <div class="card-title card2-titles col-lg-6 order-1  order-lg-1" style="height: 50px;">
+                            OVERALL GPA
+                        </div>
+                        <div class="card-title card2-titles col-lg-6 order-3  order-lg-2" style="height: 50px;">
+                            OVERALL ATTENDANCE
+                        </div>
+
+
+
+                        <div class="overall-charts card-body col-lg-6 order-2  order-lg-3 " style="height: 450px;">
+                            <div class="row" style="height: 210px;">
+                                <div class="col-6 d-flex align-items-center " id="overall-div1">
+                                    <canvas id="overall-score1" width="100" height="90"></canvas>
+                                </div>
+                                <div class="col-6 d-flex align-items-center " id="overall-div2">
+                                    <canvas id="overall-score2" width="100" height="90"></canvas>
+
+                                </div>
+                            </div>
+                            <div class="row" style="height: 210px;">
+                                <div class="col-6 d-flex align-items-center " id="overall-div3">
+                                    <canvas id="overall-score3" width="100" height="90"></canvas>
+
+                                </div>
+                                <div class="col-6 d-flex align-items-center " id="overall-div4">
+                                    <canvas id="overall-score4" width="100" height="90"></canvas>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="overall-charts card-body col-lg-6 order-4  order-lg-3" style="height: 450px;">
+                            <div class="row" style="height: 210px;">
+                                <div class="col-6 d-flex align-items-center" id="overall-div1">
+                                    <canvas id="overall-attendance1" width="100" height="90"></canvas>
+                                </div>
+                                <div class="col-6 d-flex align-items-center" id="overall-div2">
+                                    <canvas id="overall-attendance2" width="100" height="90"></canvas>
+
+                                </div>
+                            </div>
+                            <div class="row" style="height: 210px;">
+                                <div class="col-6 d-flex align-items-center" id="overall-div3">
+                                    <canvas id="overall-attendance3" width="100" height="90"></canvas>
+
+                                </div>
+                                <div class="col-6 d-flex align-items-center" id="overall-div4">
+                                    <canvas id="overall-attendance4" width="100" height="90"></canvas>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                <!-- Card3 ends -->
+
+
+            </div>
+
+            <!-- section3 end -->
+
+
+
+
+            <!-- section4 start -->
+
+            <div class="section xyz row d-flex justify-content-center align-items-center ">
+
+
+                <!-- Card4 -->
+                <div class="card  col-10 col-sm-11 col-md-10 col-lg-7" id="card4">
+
+                    <!-- Upper -->
+                    <div class="card-title row" style="height: 100px;">
+
+                        <div class="col card-title">
+                            SUGGESTED DOMAINS
+                        </div>
+
+                    </div>
+
+                    <!-- lower -->
+                    <div class="row">
+                        <div class="col card-body " id="domains">
+                            <ul>
+                                <br>
+
+                                <li> Machine Learning</li>
+                                <li> Artificial Intelligence</li>
+                                <li> Cyber Security</li>
+
+                                <br>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- Card4 ends -->
+
+
+            </div>
+            <!-- section4 end -->
+
+        </div>
+    </main>
+
+
+
+
+
+    <!--? Bottom-fixed Navbar for copyright -->
+    <nav id="bottomNavbar" class="navbar justify-content-center align-items-center  navbar-dark   fixed-bottom">
+
+        <h6><i class="fa fa-copyright" aria-hidden="true"></i>
+            A Mini Project By Group-16</h6>
+
+    </nav>
+
+
+
+    <!--? Optional JavaScript -->
+    <!--? jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+
+
+</body>
+
+<script>
+    window.scrollTo(top)
+</script>
+<script>
+
+
+
+    var sem3Btn = document.querySelector("#sem3a-button")
+    var sem4Btn = document.querySelector("#sem4a-button")
+    var sem5Btn = document.querySelector("#sem5a-button")
+    var sem6Btn = document.querySelector("#sem6a-button")
+
+    let sem3a = [78, 85, 92, 65, 89, 45, 40, 39]
+    let sem4a = [55, 86, 79, 90, 95, 26, 27, 39]
+    let sem5a = [50, 55, 60, 65, 70, 35, 32, 48]
+    let sem6a = [90, 86, 45, 94, 68, 36, 27, 45]
+
+    let sub3 = ['FDS', 'PSOOP', 'DELD', 'DS', 'COA', 'PL', 'OOPL', 'DEL']
+    let sub4 = ['DSF', 'PAI', 'CG', 'FCCN', 'M-III', 'DSFL', 'PIL', 'CGL']
+    let sub5 = ['TOC', 'DBMS', 'SE&PM', 'OS', 'HCI', 'SL-I', 'SL-II', 'SL-III']
+    let sub6 = ['CNT', 'SP', 'DAA', 'CC', 'DS&BDA', 'SL-IV', 'SL-V', 'SL-VI']
+
+    let sem3b = [55, 86, 79, 90, 95, 26]
+    let sem4b = [50, 55, 60, 65, 70, 35]
+    let sem5b = [90, 86, 45, 94, 68, 36]
+    let sem6b = [78, 85, 92, 65, 89, 45]
+
+    let months1 = ['DEC', 'JAN', 'FEB', 'MAR', 'APR', 'MAY']
+    let months2 = ['JUN', 'JULY', 'AUG', 'SEPT', 'OCT', 'NOV']
+
+    var currentData = sem3a
+    var currentLabels = sub3
+
+    var currentSem = "SEMESTER - III"
+
+    var currentData2 = sem3b
+    var currentLabels2 = months1
+
+
+
+    var ctx = document.getElementById('subject-wise');
+    Chart.defaults.global.defaultFontColor = 'white';
+
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: currentLabels,
+
+            datasets: [{
+
+                data: currentData,
+
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.7 )',
+                    'rgba(54, 162, 235, 0.7 )',
+                    'rgba(255, 206, 86, 0.7 )',
+                    'rgba(75, 192, 192, 0.7 )',
+                    'rgba(153, 102, 255, 0.7)',
+                    'rgba(255, 159, 64, 0.7 )',
+                    'rgba(195, 64, 250, 0.7 )',
+                    'rgba(32, 219, 64, 0.7  )'
+
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 0.6 )',
+                    'rgba(54, 162, 235, 0.6 )',
+                    'rgba(255, 206, 86, 0.6 )',
+                    'rgba(75, 192, 192, 0.6 )',
+                    'rgba(153, 102, 255, 0.6)',
+                    'rgba(255, 159, 64, 0.6 )',
+                    'rgba(190, 64, 250, 0.6 )',
+                    'rgba(32, 219, 64, 0.6  )'
+
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+
+            legend: {
+                display: false,
+            },
+
+            title: {
+                display: true,
+                text: "SEMESTER - III",
+                fontSize: 18
+            }
+        }
+
+
+    });
+
+    var ctx2 = document.getElementById('month-wise');
+
+    var chart2 = new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: currentLabels2,
+
+            datasets: [{
+
+                data: currentData2,
+
+                backgroundColor: 'rgba(255, 255, 255, 0.6)',
+
+                pointBackgroundColor: [
+                    'rgba(255, 99, 132, 0.7 )',
+                    'rgba(54, 162, 235, 0.7 )',
+                    'rgba(255, 206, 86, 0.7 )',
+                    'rgba(75, 192, 192, 0.7 )',
+                    'rgba(153, 102, 255, 0.7)',
+                    'rgba(255, 159, 64, 0.7 )'
+                ],
+                pointBorderColor: [
+                    'rgba(255, 99, 132, 0.6 )',
+                    'rgba(54, 162, 235, 0.6 )',
+                    'rgba(255, 206, 86, 0.6 )',
+                    'rgba(75, 192, 192, 0.6 )',
+                    'rgba(153, 102, 255, 0.6)',
+                    'rgba(255, 159, 64, 0.6 )'
+                ],
+                borderWidth: 2,
+
+                lineTension: 0,
+                fill: true,
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+
+            legend: {
+                display: false,
+            },
+
+            title: {
+                display: true,
+                text: "SEMESTER - III",
+                fontSize: 18
+            },
+        }
+
+
+    });
+
+
+
+    sem3Btn.addEventListener("click", function () {
+
+        chart.data.datasets[0].data = sem3a
+        chart.data.labels = sub3
+
+        chart2.data.datasets[0].data = sem3b
+        chart2.data.labels = months2
+
+        chart.options.title.text = "SEMESTER - III"
+        chart.update();
+
+        chart2.options.title.text = "SEMESTER - III"
+        chart2.update();
+    })
+
+    sem4Btn.addEventListener("click", function () {
+
+        myarr = sem4a
+        chart.data.datasets[0].data = sem4a
+        chart.data.labels = sub4
+
+        chart2.data.datasets[0].data = sem4b
+        chart2.data.labels = months1
+
+        chart.options.title.text = "SEMESTER - IV"
+        chart.update();
+
+        chart2.options.title.text = "SEMESTER - IV"
+        chart2.update();
+    })
+
+    sem5Btn.addEventListener("click", function () {
+
+        myarr = sem5a
+        chart.data.datasets[0].data = sem5a
+        chart.data.labels = sub5
+
+        chart2.data.datasets[0].data = sem5b
+        chart2.data.labels = months2
+
+        chart.options.title.text = "SEMESTER - V"
+        chart.update();
+
+        chart2.options.title.text = "SEMESTER - V"
+        chart2.update();
+    })
+
+    sem6Btn.addEventListener("click", function () {
+
+        myarr = sem6a
+        chart.data.datasets[0].data = sem6a
+        chart.data.labels = sub6
+
+        chart2.data.datasets[0].data = sem6b
+        chart2.data.labels = months1
+
+        chart.options.title.text = "SEMESTER - VI"
+        chart.update();
+
+        chart2.options.title.text = "SEMESTER - VI"
+        chart2.update();
+    })
+
+
+
+</script>
+
+<script>
+
+    // Overall Score Sem 3
+    var gpa1 = 9.52
+    var temp = 10 - gpa1
+
+    var ctx = document.getElementById('overall-score1');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['SEMESTER-III SCORE', 'SEMESTER-III'],
+            datasets: [{
+                data: [gpa1, temp],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 99, 132, 0.6)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            legend: {
+                display: false,
+            },
+            title: {
+                display: true,
+                text: "SEM - III :     " + gpa1,
+                fontSize: 15
+            }
+        }
+    });
+
+
+    // Overall score sem 4
+    var gpa2 = 9.52
+    var temp = 10 - gpa2
+
+    var ctx = document.getElementById('overall-score2');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['SEMESTER-IV SCORE', 'SEMESTER-IV'],
+            datasets: [{
+                data: [gpa2, temp],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 99, 132, 0.6)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            legend: {
+                display: false,
+            },
+            title: {
+                display: true,
+                text: "SEM - IV :     " + gpa2,
+                fontSize: 15
+            }
+        }
+    });
+
+    //overall score sem 5
+    var gpa3 = 9.68
+    var temp = 10 - gpa3
+
+    var ctx = document.getElementById('overall-score3');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['SEMESTER-V SCORE', 'SEMESTER-V'],
+            datasets: [{
+                data: [gpa3, temp],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 99, 132, 0.6)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            legend: {
+                display: false,
+            },
+            title: {
+                display: true,
+                text: "SEM - V :     " + gpa3,
+                fontSize: 15
+            }
+        }
+    });
+
+    //overall score sem6
+    var gpa4 = 8.84
+    var temp = 10 - gpa1
+
+    var ctx = document.getElementById('overall-score4');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['SEMESTER-VI SCORE', 'SEMESTER-VI'],
+            datasets: [{
+                data: [gpa4, temp],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 99, 132, 0.6)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            legend: {
+                display: false,
+            },
+            title: {
+                display: true,
+                text: "SEM - VI :     " + gpa4,
+                fontSize: 15
+            }
+        }
+    });
+
+    //////////////////////////////////////////////////////////////ATTENDANCE PIE CHARTS///////////////////////////////
+    //overall attendance sem3
+    var att1 = 96
+    var temp = 100 - att1
+
+    var ctx = document.getElementById('overall-attendance1');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['SEM-III ATTENDANCE', 'SEMESTER-III'],
+            datasets: [{
+                data: [att1, temp],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 99, 132, 0.6)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            legend: {
+                display: false,
+            },
+            title: {
+                display: true,
+                text: "SEM - III :     " + att1 + " %",
+                fontSize: 15
+            }
+        }
+    });
+
+    //overall attendance sem4
+    var att2 = 84
+    var temp = 100 - att2
+
+    var ctx = document.getElementById('overall-attendance2');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['SEM-IV ATTENDANCE', 'SEMESTER-IV'],
+            datasets: [{
+                data: [att2, temp],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 99, 132, 0.6)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            legend: {
+                display: false,
+            },
+            title: {
+                display: true,
+                text: "SEM - IV :     " + att2 + " %",
+                fontSize: 15
+            }
+        }
+    });
+
+    //overall attendance sem5
+    var att3 = 75
+    var temp = 100 - att3
+
+    var ctx = document.getElementById('overall-attendance3');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['SEM-V ATTENDANCE', 'SEMESTER-V'],
+            datasets: [{
+                data: [att3, temp],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 99, 132, 0.6)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            legend: {
+                display: false,
+            },
+            title: {
+                display: true,
+                text: "SEM - V :     " + att3 + " %",
+                fontSize: 15
+            }
+        }
+    });
+
+    //overall attendance sem6
+    var att4 = 64
+    var temp = 100 - att4
+
+    var ctx = document.getElementById('overall-attendance4');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['SEM-VI ATTENDANCE', 'SEMESTER-VI'],
+            datasets: [{
+                data: [att4, temp],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 99, 132, 0.6)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            legend: {
+                display: false,
+            },
+            title: {
+                display: true,
+                text: "SEM - VI :     " + att4 + " %",
+                fontSize: 15
+            }
+        }
+    });
+</script>
+
+</html>

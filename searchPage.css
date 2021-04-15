@@ -1,0 +1,294 @@
+/* * {
+    border: 1px solid red;
+} */
+
+
+body {
+    background-image: linear-gradient(to right, #00C49A , #63c2ac);
+    position: relative;
+    -webkit-user-select: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+/* !NAVBAR TOP */
+/*  *Student information tracker */
+.navbar{
+    background-color: #1A535C;
+  }
+  #mainNavbar .navbar-brand {
+    color: #0e3131;
+    font-weight: 600;
+    background-image: linear-gradient(to right, #bcbebc, #dde2dd, #c4c0c0);
+    border-radius: 10px;
+  
+    
+  }
+  
+  /* *for pict logo */
+  .img-fluid {
+    height: 3rem;
+    border-radius: 10px;
+  }
+  
+  /*  * about and contact links */
+  #mainNavbar .nav-link {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    color: #fdfdfd;
+  }
+  
+  /*  * abou and contact links on hover*/
+  #mainNavbar .nav-link:hover {
+    color: #2b2b2b;
+    background-color: #f0efef;
+  }
+  
+  .modal {
+    background-color: #090a09dc;
+  
+  }
+  
+  .modal-content {
+    border: none;
+    border-radius: 10vh;
+  }
+  
+  .modal-header {
+    background-image: linear-gradient(to right, #bcbebc, #dde2dd, #c4c0c0);
+    color: #0e3131;
+    font-size: 20px;
+    font-weight: 700;
+  
+    border: none;
+  }
+  
+  .modal-body {
+    color: #f0f0f0;
+    background: linear-gradient(to top, #206d67, #13423e);
+    border: none;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 30px;
+  
+  }
+  
+
+
+/* !MAIN CONTENT */
+/* *adding margin to container due to navbar */
+.content {
+    margin-top: 4.7rem;
+}
+
+
+
+#slider-wrapper{
+    font-size: 25px;
+    color: rgb(43, 36, 36);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+.invisible{
+    opacity: 0;
+}
+
+#slider{
+    height: 50px;
+    padding-left: 1vw;
+    overflow: hidden;
+
+}
+
+#slider div{
+    height: 50px;
+    margin-bottom: 50px;
+    padding: 7px 15px ;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+#text1{
+    background-color: rgb(26, 76, 168);
+    color: white;
+    animation: slide 4s linear infinite;
+}
+
+#text2{
+    background-color: rgb(245, 91, 63);
+    color: white;
+}
+
+#text3{
+    background-color: rgb(17, 129, 73);
+    color: white;
+}
+
+#text4{
+    background-color: purple;
+    color: white;
+}
+
+@keyframes slide{
+    0%{
+        margin-top: 100px;
+    }
+    5%{
+        margin-top: 00px;
+    }
+    25%{
+       margin-top: 00px;
+    }
+    30%{
+        margin-top: -100px;
+    }
+    50%{
+        margin-top: -100px;
+    }
+    55%{
+        margin-top: -200px;
+    }
+    75%{
+        margin-top: -200px;
+    }
+    80%{
+        margin-top: -300px;
+    }
+    100%{
+        margin-top: -300px;
+    }
+}
+
+@keyframes beat{
+    0%{
+        transform: scale(1);
+    }
+    30%{
+        transform: scale(1.15);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.beater{
+    animation: beat 0.8s linear infinite;
+
+}
+
+/* *when width < 576 (on small devices) , reduce font-size of navbar */
+/* *so that navbar collapse looks good on small screen */
+
+@media (max-width: 576px) {
+
+    #mainNavbar .navbar-brand {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width: 768px)
+{
+    
+    #slider-wrapper{
+        font-size: 16px;
+    }
+
+    #slider div{
+        width: 170px;
+        padding-top: 12px;
+    }
+}
+
+
+/* !NAVBAR - BOTTOM */
+
+/* *Bottom navbar which is fixed-bottom */
+#bottomNavbar {
+    color: #e4e4e4;
+    height: 30px;
+}
+
+/** copyright text */
+#bottomNavbar h6 {
+    font-size: 13px;
+}
+
+
+.search-box {
+
+ margin: auto auto;
+ padding: 0 5px;
+ background: #2f3640;
+ height: 50px;
+ width: fit-content;
+ border-radius: 40px;
+
+
+}
+
+.msg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20vh;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.input-box {
+ border: none;
+ background: none;
+ outline: none;
+ color: rgb(32, 32, 32);
+ font-weight: 600;
+ font-size: 20px;
+ transition: 0.4s all;
+ line-height: 30px;
+ width: 0px;
+
+}
+
+.done1{
+    width: 40vw;
+}
+
+
+
+form button {
+    background-image: linear-gradient(to right, rgb(49, 139, 153), rgb(39, 116, 128), rgb(40, 122, 134));
+ float: right;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+border: none;
+ outline: none;
+color: #e4e4e4;
+
+
+ line-height: 30px;
+ font-size: 20px;
+ text-align: center;
+ padding: 3px 5px;
+ margin: 5px 2px;
+
+} 
+
+.search-box:hover .input-box, .done1{
+ width: 40vw;
+ padding: 20px 10px;
+ margin: 4px 10px 5px 5px;
+ height: 35px;
+ background: #dee2de;
+ border-radius: 30px 10px 10px 30px;
+}
+
+.search-box:hover form button, .done2{
+background: #24d0d6;
+ color: black;
+}
+

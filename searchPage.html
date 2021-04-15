@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- ?Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- ?Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <!-- ?Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--? Custom CSS -->
+    <link rel="stylesheet" href="searchPage.css">
+
+
+    <title> Search Page | Student Information Tracker </title>
+
+
+</head>
+
+<body>
+
+    <!-- ?Modal1 ----------------------------------->
+    <div class="modal fade" id="AboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title" id="exampleModalCenterTitle">About the Student Information Tracker... &nbsp
+                        &nbsp &nbsp </h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        &nbsp &nbsp &nbsp &nbsp Student Information Tracking System is a Web application where User can
+                        <strong>search</strong> for a
+                        particular
+                        Student of the Institute and get the information along with his/her <em> performance </em>in
+                        exams for each
+                        semester.
+                        All the
+                        information is shown in a <strong>visually appealing way</strong> such as graphs, pie-charts,
+                        etc.
+                        <br> &nbsp &nbsp &nbsp &nbsp The
+                        application
+                        also
+                        <strong> suggests </strong>a particular stream / domain in which the student might be interested
+                        in based on
+                        his/her
+                        past performance.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--? Modal2 -------------------------------------->
+    <div class="modal fade" id="ContactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title" id="exampleModalCenterTitle">This Web App is created by Group No. 16 &nbsp
+                        &nbsp &nbsp</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <ul>
+                            <li>
+                                Omkar Dabir (Roll No.- 23116)
+                            </li>
+                            <li>
+                                Prince Bhagat (Roll No.- 23110)
+                            </li>
+                            <li>
+                                Ojas Telwane (Roll No.- 23140)
+                            </li>
+                            <li>
+                                Priyadarshan Todmal (Roll No.- 23161)
+                            </li>
+                            <li>
+                                Chirag Vohra (Roll No.- 23115)
+                            </li>
+                            <li>
+                                Akash Salave (Roll No.- 23151)
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--? div for navbar -->
+    <div>
+        <nav id="mainNavbar" class="navbar navbar-dark bg-dare navbar-expand-md py-2 fixed-top">
+            <!--? so that navbar is not fullscreen wide -->
+            <div class="container">
+
+                <!--? brand logo and name -->
+                <a href="loginpage.html" class="navbar-brand active px-2 mx-4 mx-md-0 " title="Home">
+                    <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Pict_logo.png"
+                        alt="HOME">
+                    STUDENT INFORMATION TRACKER
+                </a>
+
+                <!--? ham-burger button -->
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--? two links on left -->
+                <div class="collapse navbar-collapse " id="navLinks">
+                    <ul class="navbar-nav ml-auto nav nav-pills my-1">
+                        <li class="nav-item ">
+                            <a href="" class="nav-link mt-4 mt-md-0" data-toggle="modal" data-target="#AboutModal"
+                                title="About Website">
+                                <i class="fa fa-info-circle mr-3 mr-md-2 " aria-hidden="true"></i>
+                                HELP
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link" data-toggle="modal" data-target="#ContactModal"
+                                title="About Developers">
+                                <i class="fa fa-phone-square  mr-3 mr-md-2" aria-hidden="true"></i>
+                                ABOUT US</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+    </div>
+
+
+
+
+    <!--? mid-screen -->
+    <div>
+
+
+        <div class="container">
+            <div class="row" style="height: 680px;">
+                <div class="col-lg-8 mx-auto">
+
+                    <div class="row msg" style="height: 250px;">
+                        Now Go Ahead and Search !
+                    </div>
+
+                    <div class="row d-flex align-items-center" style="height: 200px;">
+
+                        <div class="search-box beater d-flex align-items-center">
+                            <form action="searchPage.html">
+                                <input class="input-box" type="text" name="" placeholder="Search Student ..."
+                                    spellcheck="false">
+                                <button type="submit" id="search-btn" class="">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="col-12 content d-flex my-0 align-items-center justify-content-center">
+
+                            <div id="slider-wrapper" class="invisible d-flex justify-content-center align-items-center">
+
+                                Search by any of these :
+
+                                <div id="slider">
+                                    <div id="text1">Name</div>
+                                    <div id="text2">Roll Number</div>
+                                    <div id="text3">P.R.N.</div>
+                                    <div id="text4">Registration ID</div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+        <!--? Bottom-fixed Navbar for copyright -->
+        <nav id="bottomNavbar" class="navbar justify-content-center align-items-center  navbar-dark  fixed-bottom">
+
+            <h6><i class="fa fa-copyright" aria-hidden="true"></i>
+                A Mini Project By Group-16</h6>
+
+        </nav>
+
+    </div>
+
+
+
+
+
+
+    <!--? Optional JavaScript -->
+    <!--? jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>
+
+
+
+</body>
+
+<script>
+
+    var input = document.querySelector(".input-box")
+    var btn = document.querySelector("#search-btn")
+    var srch = document.querySelector(".search-box")
+    var visi = document.querySelector("#slider-wrapper")
+
+    btn.addEventListener("mouseover", function () {
+        input.classList.add("done1")
+        btn.classList.add("done2")
+        srch.classList.remove("beater")
+        visi.classList.remove("invisible")
+
+    })
+
+    input.addEventListener("mouseover", function () {
+        input.classList.add("done1")
+        btn.classList.add("done2")
+        srch.classList.remove("beater")
+        visi.classList.remove("invisible")
+
+
+    })
+</script>
+
+</html>

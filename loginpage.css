@@ -1,0 +1,297 @@
+body {
+    /* background-image: linear-gradient(to right, #208023, #24d62d, #208023); */
+    position: relative;
+    -webkit-user-select: none;
+    background-image: linear-gradient(to right, #00C49A , #63c2ac);
+    font-family: 'Ubuntu', sans-serif;
+
+   
+  }
+  
+
+
+/* !NAVBAR TOP */
+/*  *Student information tracker */
+.navbar{
+    background-color: #1A535C;
+  }
+  #mainNavbar .navbar-brand {
+    color: #0e3131;
+    font-weight: 600;
+    background-image: linear-gradient(to right, #bcbebc, #dde2dd, #c4c0c0);
+    border-radius: 10px;
+  
+    
+  }
+  
+  /* *for pict logo */
+  .img-fluid {
+    height: 3rem;
+    border-radius: 10px;
+  }
+  
+  /*  * about and contact links */
+  #mainNavbar .nav-link {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    color: #fdfdfd;
+  }
+  
+  /*  * abou and contact links on hover*/
+  #mainNavbar .nav-link:hover {
+    color: #2b2b2b;
+    background-color: #f0efef;
+  }
+  
+  .modal {
+    background-color: #090a09dc;
+  
+  }
+  
+  .modal-content {
+    border: none;
+    border-radius: 10vh;
+  }
+  
+  .modal-header {
+    background-image: linear-gradient(to right, #bcbebc, #dde2dd, #c4c0c0);
+    color: #0e3131;
+    font-size: 20px;
+    font-weight: 700;
+  
+    border: none;
+  }
+  
+  .modal-body {
+    color: #f0f0f0;
+    background: linear-gradient(to top, #1A535C, #1A535C);
+    border: none;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 30px;
+  
+  }
+  
+
+
+/* !MAIN CONTENT */
+/* *adding margin to container due to navbar */
+.content {
+    margin-top: 4.7rem;
+}
+
+
+#myCards {
+    perspective: 600px;
+}
+
+/* *login card */
+.card {
+    position: relative;
+    height: 500px;
+    color: #f0f0f0;
+    background: linear-gradient(to top, #133f46, #133f46);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 1px #172b1b;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+/*  * input fields */
+.inputBox {
+    text-align: center;
+    height: 100px;
+}
+
+/* *font awesome icons */
+.inputBox .fa {
+    font-size: 30px;
+
+}
+
+/* *reg id and password inputs */
+input[type=text],
+input[type=password] {
+    border: none;
+    border-radius: 3px;
+    border-bottom: 1px solid #F4E7BB;
+    background: transparent;
+    outline: none;
+   
+    color: #e8f7ee;
+    text-align: center;
+    height: 50px;
+    width: 15rem;
+}
+
+::placeholder{
+    color: #e8f7ee;
+
+}
+
+/** gradient for the logo and text */
+.card1-window {
+    background-image: linear-gradient(to right, #817e7e, #dde2dd, #817e7e);
+    border-radius: 7px;
+    color: #0e3131
+}
+
+
+/* * for get started button  */
+/* ?get started button has text inside a span */
+
+#card1 {
+    transition: 0.3s;
+}
+
+.card1Button {
+    color: #0e3131;
+    background-image: linear-gradient(to right, #29a096, #3de0c5, #29a096);
+
+    height: 50px;
+    width: 110px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    border: none;
+    font-weight: bold;
+
+
+    transition: 0.3s;
+}
+
+.card1Button:hover {
+    width: 160px;
+    background-image: linear-gradient(to right, #3de0c5, #81e0d8, #3de0c5);
+
+
+}
+
+.card1Button span {
+    position: absolute;
+    transition: 0.3s;
+}
+
+.card1Button span::after {
+    content: '\00bb';
+    position: absolute;
+    font-size: 30px;
+    opacity: 0;
+    top: -14px;
+    right: -20px;
+    transition: 0.3s;
+}
+
+
+.card1Button:hover span {
+    padding-right: 25px;
+}
+
+.card1Button:hover span::after {
+
+    opacity: 1;
+    right: 0;
+}
+
+.login-title{
+    letter-spacing: 3px;
+}
+/* *to solve z-index problem */
+#card2 {
+    margin-top: -500px;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+
+/* *submit button */
+.card2Button {
+    color: #0e3131;
+    background-image: linear-gradient(to right, #8c8d8c, #dde2dd, #919191);
+
+    height: 50px;
+    width: 100px;
+
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+/* *login button on hover */
+.card2Button:hover {
+    background-image: linear-gradient(to right, #229226, #2dcb35, #229226);
+    box-shadow: 1px 2px 6px 1px white;
+    color: white;
+}
+
+
+/* for cards container */
+.anim1 {
+    transform: rotateY(180deg), translate(50%);
+}
+
+/* for front card */
+.anim2 {
+    transform: rotateY(180deg);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+
+}
+
+/* for back-card */
+.anim3 {
+    transform: rotateY(360deg);
+    z-index: 5;
+}
+
+
+
+
+
+/* *when width < 576 (on small devices) , reduce font-size of navbar */
+/* *so that navbar collapse looks good on small screen */
+
+@media (max-width: 678px) {
+
+    #myCards,
+    #card1,
+    #card2 {
+        transform: scale(0.92);
+    }
+}
+
+@media (max-width: 576px) {
+
+    #mainNavbar .navbar-brand {
+        font-size: 0.8rem;
+    }
+
+    #myCards,
+    #card1,
+    #card2 {
+        transform: scale(0.85);
+    }
+
+}
+
+
+/* !NAVBAR - BOTTOM */
+
+/* *Bottom navbar which is fixed-bottom */
+#bottomNavbar {
+    color: #e4e4e4;
+    height: 30px;
+}
+
+/** copyright text */
+#bottomNavbar h6 {
+    font-size: 13px;
+}
